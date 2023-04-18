@@ -4,13 +4,13 @@
 #include "stdio.h"
 #include "SRTMrdf.h"
 
-  void main(int argc, char *argv[])
+  int main(int argc, char *argv[])
 {
    char *infile;
    RDF *rdfParams,*tmp;
    char *s;
    float d1,d2,d3,d4;
-   int i1,i2,i3,i4;
+   int32_t i1,i2,i3,i4;
    
 
    infile = "rdftest.in";
@@ -39,7 +39,7 @@
        if(tmp->units != NULL) 
           fprintf(stderr,"Units   = |%s|\n", tmp->units);
 
-       if(tmp->value != NULL);
+       if(tmp->value != NULL)
           fprintf(stderr,"Data    = |%s|\n", tmp->value);
        if(tmp->comment != NULL) 
           fprintf(stderr,"Comment = %s\n", tmp->comment);
@@ -53,8 +53,6 @@
    rdfWrite(stdout,"Keyword 1",NULL,NULL,' ',NULL,"fjfkjakgjaskdg");
    rdfWrite(stdout,"Keyword 2","m,m",NULL,'=',"1 2 3","fjfkjakgjaskdg");
    rdfWrite(stdout,"Keyword 3","m,m","1:3",'=',"23425213",NULL);
-
-
 
    fprintf(stderr,s,d1);
    fprintf(stderr,"\n");
