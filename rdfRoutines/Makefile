@@ -1,7 +1,9 @@
 CC =		gcc
-CFLAGS  =	$(FLAGS) -c  $(INCLUDEPATH) 
+CFLAGS  =	$(FLAGS) -c  -I$(INCLUDEPATH) 
 
 OBJS=  SRTMrdf.o rdftest.o
+
+$(shell mkdir -p $(MACHTYPE)-$(OSTYPE))
 
 .KEEP_STATE:
 all:	$(OBJS)

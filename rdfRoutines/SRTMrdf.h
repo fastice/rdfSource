@@ -1,5 +1,5 @@
 
-
+#include <stdlib.h>
 typedef struct RDFType
 {
    char *keyword;        /* RDF keyword */
